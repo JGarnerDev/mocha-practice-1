@@ -9,7 +9,7 @@
 var assert = require("assert");
 var authController = require("../../controllers/auth.controller2");
 
-describe("authController2 (Hooks)", () => {
+describe.skip("authController2 (Hooks)", () => {
 	// Hook runs before each test in the describe scope
 	beforeEach(function settingUpRoles() {
 		console.log("	**running `before each` hook**");
@@ -24,8 +24,6 @@ describe("authController2 (Hooks)", () => {
 			authController.setRoles(["user", "admin"]);
 			assert.strictEqual(true, authController.isAuthorized("admin"));
 		});
-		it("does not allow a get if not authorized ", () => {});
-		it("does allow a get if authorized ", () => {});
 	});
 
 	describe("isAuthorizedAsync", () => {

@@ -1,7 +1,5 @@
-var assert = require('assert')
+var assert = require("assert");
 
-describe('basic mocha test', () => {
-  it('should pass basic assertions', () => {
-    assert.strictEqual(3, 3)
-  })
-})
+describe("basic mocha test", () => {
+	it("should pass basic assertions", () => {});
+});

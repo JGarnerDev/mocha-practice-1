@@ -11,3 +11,7 @@
 
 - beforeEach hook
 - .skip and .only
+
+### auth.controller3
+
+- chai and cleaning up tests
