@@ -5,11 +5,7 @@ const chaiAsPromised = require("chai-as-promised");
 chai.use(chaiAsPromised);
 chai.should();
 
-describe("authController4 (Promises)", () => {
-	beforeEach(function settingUpRoles() {
-		authController.setRoles(["user"]);
-	});
-
+describe.skip("authController4 (Promises)", () => {
 	// if what we're testing returns a promise, `.eventually` is added,
 	// and the test returns the object
 

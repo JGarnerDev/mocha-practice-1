@@ -1,6 +1,9 @@
 function AuthController() {
 	let roles;
-
+	function setRoles(role) {
+		roles = role;
+		user.roles = role;
+	}
 	function isAuthorizedPromise(neededRole, cb) {
 		return new Promise(function (resolve) {
 			setTimeout(function () {
@@ -9,7 +12,7 @@ function AuthController() {
 		});
 	}
 
-	return { isAuthorizedPromise };
+	return { isAuthorizedPromise, setRoles };
 }
 
 module.exports = AuthController();
