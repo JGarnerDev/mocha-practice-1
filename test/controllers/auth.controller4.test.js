@@ -1,30 +1,22 @@
 const authController = require("../../controllers/auth.controller4");
+const chai = require("chai");
 const should = require("chai").should();
+const chaiAsPromised = require("chai-as-promised");
+chai.use(chaiAsPromised);
+chai.should();
 
-describe("authController4 (Promises", () => {
+describe("authController4 (Promises)", () => {
 	beforeEach(function settingUpRoles() {
 		authController.setRoles(["user"]);
 	});
 
-	describe("isAuthorized", () => {
-		it("returns false if not authorized", () => {
-			const isAuth = authController.isAuthorized("admin");
+	// if what we're testing returns a promise, `.eventually` is added,
+	// and the test returns the object
 
-			isAuth.should.be.false;
-		});
-		it("returns true if authorized", () => {
-			authController.setRoles(["user", "admin"]);
-			const isAuth = authController.isAuthorized("admin");
-			isAuth.should.be.true;
-		});
-	});
-
-	describe("isAuthorizedAsync", () => {
-		it("returns false if not authorized", function (done) {
-			authController.isAuthorizedAsync("admin", function (isAuth) {
-				isAuth.should.be.false;
-				done();
-			});
+	describe("isAuthorizedPromise", () => {
+		it("returns false if not authorized", function () {
+			return authController.isAuthorizedPromise("admin").should.eventually.be
+				.false;
 		});
 	});
 });

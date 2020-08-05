@@ -14,4 +14,15 @@
 
 ### auth.controller3
 
-- chai and cleaning up tests
+- BDD & Chai
+- .should
+
+### auth.controller4
+
+- Promises
+- .eventually
+
+### auth.controller5
+
+- Sinon
+- Spys, stubs, and mocks

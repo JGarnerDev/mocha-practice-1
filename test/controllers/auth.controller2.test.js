@@ -9,7 +9,7 @@
 var assert = require("assert");
 var authController = require("../../controllers/auth.controller2");
 
-describe.skip("authController2 (Hooks)", () => {
+describe("authController2 (Hooks)", () => {
 	// Hook runs before each test in the describe scope
 	beforeEach(function settingUpRoles() {
 		console.log("	**running `before each` hook**");
